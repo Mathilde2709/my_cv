@@ -4,3 +4,7 @@
 #index:
 #    path: /
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
+
+app_lucky_number:
+    path: /mycv/number
+    controller: App\Controller\MathildeController::number
