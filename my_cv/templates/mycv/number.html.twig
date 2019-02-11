@@ -72,7 +72,7 @@
 				</ul>
 			</div>
 			
-			
+			<a href="http://symphony-zera1.c9users.io/my_cv/public/index.php/edit/experience/2" target="_blank">Formulaire Expérience</a>
 			<div class="clear"></div>
 		</section>
 		
@@ -116,6 +116,8 @@
 					{% endfor %}
 				</ul>
 			</div>
+			
+			<a href="http://symphony-zera1.c9users.io/my_cv/public/index.php/edit/formation/1" target="_blank">Formulaire Formation</a>
 			<div class="clear"></div>
 		</section>
 		
@@ -132,6 +134,33 @@
 							{{loisirs.getName()|capitalize }} <br/>
 							{{loisirs.getSubject()}} <br/>
 							{{loisirs.getCompetences()}}
+							
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			
+			<a href="http://symphony-zera1.c9users.io/my_cv/public/index.php/edit/loisirs/4" target="_blank">Formulaire Loisir</a>
+			<div class="clear"></div>
+		</section>
+		
+		<section>
+			<div class="sectionTitle">
+				<h1>Contact</h1>
+			</div>
+			
+
+			
+
+			<div class="sectionContent col-md-9 col-sm-9 col-xs-12">
+				<ul>
+				    {% for con in contact  %}
+						<li class="padding-top-10">
+							{{con.getName()|capitalize }} <br/>
+							{{con.getTelephone()}} <br/>
+							{{con.getEmail()}} <br/>
+							{{con.getAdresse()}} <br/>
+							{{con.getPortfolio()}}
 							
 						</li>
 					{% endfor %}

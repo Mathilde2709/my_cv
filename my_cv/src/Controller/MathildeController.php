@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\Formation;
 use App\Entity\Experience;
 use App\Entity\Loisirs;
+use App\Entity\Contact;
 
 class MathildeController extends Controller
 {
@@ -15,6 +16,7 @@ class MathildeController extends Controller
         $formations = $this->getDoctrine()->getRepository(Formation::class)->findAll();
         $experiences = $this->getDoctrine()->getRepository(Experience::class)->findAll();
         $loisirs = $this->getDoctrine()->getRepository(Loisirs::class)->findAll();
+        $contact = $this->getDoctrine()->getRepository(Contact::class)->findAll();
         
 
         return $this->render('mycv/number.html.twig',[
@@ -23,7 +25,8 @@ class MathildeController extends Controller
             'namefamily' => 'Meunier',
             'formations'=> $formations,
             'experiences'=>$experiences,
-            'loisirs'=>$loisirs
+            'loisirs'=>$loisirs,
+            'contact'=>$contact
             ]);
            
         }
@@ -77,6 +80,23 @@ class MathildeController extends Controller
             return $this->redirectToRoute('app_lucky_number');
         }
 
+         public function createcontact()
+         {
+            $form = new Contact();
+            $form->setName('Mes Contacts');
+            $form->setTelephone('0625896347');
+            $form->setEmail('mathildemeunier@gmail.com');
+            $form->setAdresse('7 rue pyeonyong Séoul');
+            $form->setPortfolio('mathildemeunier.com');
+            $eManager=$this->getDoctrine()->getManager();
+            $eManager->persist($form);
+            $eManager->flush();
+            
+            return $this->redirectToRoute('app_lucky_number');
+            //return $this->render('mycv/experiences.html.twig',
+            //[]);
+        
+    }
 }
 
 

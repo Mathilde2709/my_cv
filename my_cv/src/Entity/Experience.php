@@ -16,7 +16,6 @@ class Experience
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank
      */
     private $id;
 
@@ -48,7 +47,6 @@ class Experience
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
-     * @Assert\Type("\DateTime")
      */
     private $lieu;
 

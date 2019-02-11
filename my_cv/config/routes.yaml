@@ -8,6 +8,10 @@
 app_lucky_number:
     path: /mycv/number
     controller: App\Controller\MathildeController::number
+
+create_contact:
+    path: /create/contact
+    controller: App\Controller\MathildeController::createcontact
     
 create_formation:
     path: /create/formation
@@ -56,4 +60,6 @@ valid_formation:
 edit_formation:
     path: /edit/formation/{id}
     controller: App\Controller\FormationController::edit
-    
+
+
+

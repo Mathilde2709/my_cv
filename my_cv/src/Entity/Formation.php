@@ -17,7 +17,6 @@ class Formation
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank
      */
     private $id;
 
@@ -43,7 +42,6 @@ class Formation
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank
-     * @Assert\Type("\DateTime")
      */
     private $lieu;
 
