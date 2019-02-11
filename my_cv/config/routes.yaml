@@ -6,5 +6,17 @@
 #    defaults: { _controller: 'App\Controller\DefaultController::index' }
 
 app_lucky_number:
-    path: /mycv/number/{name}-{namefamily}
+    path: /mycv/number
     controller: App\Controller\MathildeController::number
+    
+create_formation:
+    path: /create/formation
+    controller: App\Controller\MathildeController::createformation
+    
+create_experience:
+    path: /create/experience
+    controller: App\Controller\MathildeController::createexperience
+    
+create_loisirs:
+    path: /create/loisirs
+    controller: App\Controller\MathildeController::createloisirs
