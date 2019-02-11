@@ -2,5 +2,7 @@
 <html>
     <h1> Création d'une nouvelle expérience </h1>
     {{ form_start(form, {'action': path('valid_experience') }) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
     {{ form(form)}}
 </html>
