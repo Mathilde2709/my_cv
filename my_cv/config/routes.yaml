@@ -20,3 +20,40 @@ create_experience:
 create_loisirs:
     path: /create/loisirs
     controller: App\Controller\MathildeController::createloisirs
+    
+formulaire_loisirs:
+    path: /formulaire/loisirs
+    controller: App\Controller\LoisirsController::create
+
+valid_loisirs:
+    path: /valid/loisirs
+    controller: App\Controller\LoisirsController::valid
+
+edit_loisirs:
+    path: /edit/loisirs/{id}
+    controller: App\Controller\LoisirsController::edit
+    
+formulaire_experience:
+    path: /formulaire/experience
+    controller: App\Controller\ExperienceController::create
+    
+valid_experience:
+    path: /valid/experience
+    controller: App\Controller\ExperienceController::valid
+
+edit_experience:
+    path: /edit/experience/{id}
+    controller: App\Controller\ExperienceController::edit
+
+formulaire_formation:
+    path: /formulaire/formation
+    controller: App\Controller\FormationController::create
+    
+valid_formation:
+    path: /valid/formation
+    controller: App\Controller\FormationController::valid
+
+edit_formation:
+    path: /edit/formation/{id}
+    controller: App\Controller\FormationController::edit
+    
