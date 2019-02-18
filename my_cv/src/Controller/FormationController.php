@@ -44,10 +44,10 @@ class FormationController extends Controller
     
     public function remove($id)
     {
-        $formation = $eManager->getRepository("AppBundle:Formation")->FindOneBy(["id"=>$id]);
         $eManager = $this->getDoctrine()->getManager();
+        $formation = $eManager->getRepository(Formation::class)->FindOneBy(["id"=>$id]);
         $eManager->remove($formation);
-        $eManager->flush;
+        $eManager->flush();
         
         return $this->redirectToRoute('app_lucky_number');
     }

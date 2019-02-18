@@ -97,6 +97,11 @@ class MathildeController extends Controller
             //[]);
         
     }
+    
+    public function admin()
+    {
+        return new Response('<html><body>Page d\'authentification</body></html>');
+    }
 }
 
 

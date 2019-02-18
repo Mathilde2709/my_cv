@@ -44,10 +44,10 @@ class LoisirsController extends Controller
     
     public function remove($id)
     {
-        $loisirs = $eManager->getRepository("AppBundle:Loisirs")->FindOneBy(["id"=>$id]);
         $eManager = $this->getDoctrine()->getManager();
+        $loisirs = $eManager->getRepository(Loisirs::class)->FindOneBy(["id"=>$id]);
         $eManager->remove($loisirs);
-        $eManager->flush;
+        $eManager->flush();
         
         return $this->redirectToRoute('app_lucky_number');
     }

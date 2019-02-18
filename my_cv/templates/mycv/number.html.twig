@@ -69,14 +69,19 @@
 							{{experiences.getDateFin() |  date('d-m-y') }}
 						</li>
 						
+						{% if is_granted('ROLE_ADMIN')%}
 						<a href="{{ path('edit_experience', {id:experiences.getId()})
 						}}">Edit</a>
+						<a href="{{ path('remove_experience', {id:experiences.getId()})}}">Remove</a>
+						{%endif%}
 					{% endfor %}
 				</ul>
 			</div>
 			
+			{%if is_granted('ROLE_ADMIN')%}
 			<a href="{{ path('formulaire_experience')}}" target="_blank">Formulaire Expérience</a>
 			<div class="clear"></div>
+			{%endif%}
 		</section>   
 		
 		
@@ -116,11 +121,20 @@
 							{{formations.getDateDebut() | date('d-m-y') }} /
 							{{formations.getDateFin() |  date('d-m-y') }}
 						</li>
+						
+						{% if is_granted('ROLE_ADMIN')%}
+						<a href="{{ path('edit_formation', {id:formations.getId()})
+						}}">Edit</a>
+						<a href="{{ path('remove_formation', {id:formations.getId()})}}">Remove</a>
+						{%endif%}
 					{% endfor %}
 				</ul>
 			</div>
 			
+			{%if is_granted('ROLE_ADMIN')%}
 			<a href="{{ path('formulaire_formation')}}" target="_blank">Formulaire Formation</a>
+			{%endif%}
+			
 			<div class="clear"></div>
 		</section>
 		
@@ -139,11 +153,20 @@
 							{{loisirs.getCompetences()}}
 							
 						</li>
+						
+						{% if is_granted('ROLE_ADMIN')%}
+						<a href="{{ path('edit_loisirs', {id:loisirs.getId()})
+						}}">Edit</a>
+						<a href="{{ path('remove_loisirs', {id:loisirs.getId()})}}">Remove</a>
+						{%endif%}
 					{% endfor %}
 				</ul>
 			</div>
 			
+			{%if is_granted('ROLE_ADMIN')%}
 			<a href="{{ path('formulaire_loisirs')}}" target="_blank">Formulaire Loisir</a>
+			{%endif%}
+			
 			<div class="clear"></div>
 		</section>
 		

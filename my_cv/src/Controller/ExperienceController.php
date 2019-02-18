@@ -45,10 +45,10 @@ class ExperienceController extends Controller
     
     public function remove($id)
     {
-        $experience = $eManager->getRepository("AppBundle:Experience")->FindOneBy(["id"=>$id]);
         $eManager = $this->getDoctrine()->getManager();
+        $experience = $eManager->getRepository(Experience::class)->FindOneBy(["id"=>$id]);
         $eManager->remove($experience);
-        $eManager->flush;
+        $eManager->flush();
         
         return $this->redirectToRoute('app_lucky_number');
     }

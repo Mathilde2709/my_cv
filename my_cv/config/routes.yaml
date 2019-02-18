@@ -62,7 +62,19 @@ edit_formation:
     controller: App\Controller\FormationController::edit
 
 remove_experience:
-    path: /remove/experience
+    path: /remove/experience/{id}
     controller: App\Controller\ExperienceController::remove
+
+remove_formation:
+    path: /remove/formation/{id}
+    controller: App\Controller\FormationController::remove
+    
+remove_loisirs:
+    path: /remove/loisirs/{id}
+    controller: App\Controller\LoisirsController::remove
+    
+admin:
+    path: /admin
+    controller: App\Controller\MathildeController::admin
 
 
