@@ -61,5 +61,8 @@ edit_formation:
     path: /edit/formation/{id}
     controller: App\Controller\FormationController::edit
 
+remove_experience:
+    path: /remove/experience
+    controller: App\Controller\ExperienceController::remove
 
 

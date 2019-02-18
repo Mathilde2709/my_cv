@@ -11,6 +11,7 @@ use App\Form\ExperienceType;
 
 class ExperienceController extends Controller
 {
+    
     public function create()
     {
         $experience = new Experience();
@@ -27,13 +28,29 @@ class ExperienceController extends Controller
     {
         $entityManager = $this->getDoctrine()->getManager();
         $experience = $entityManager->getRepository(Experience::class)->findOneBy(['id' => $id]);
-        $form = $this->createForm(ExperienceType::class, $experience);
-        
-        return $this->render('experience/create.html.twig',[
-            'entity'=>$experience,
-            'form' =>$form->createView(),
-            ]
+        if($experience){
+            $form = $this->createForm(ExperienceType::class, $experience);
+            
+            return $this->render('experience/create.html.twig',[
+                'entity'=>$experience,
+                'form' =>$form->createView(),
+                ]
+            );
+        } else {
+            return new Response(
+            '<html><body>Pas d\'ID </body></html>'
         );
+        }
+    }
+    
+    public function remove($id)
+    {
+        $experience = $eManager->getRepository("AppBundle:Experience")->FindOneBy(["id"=>$id]);
+        $eManager = $this->getDoctrine()->getManager();
+        $eManager->remove($experience);
+        $eManager->flush;
+        
+        return $this->redirectToRoute('app_lucky_number');
     }
     
     public function valid(Request $request)
@@ -59,4 +76,5 @@ class ExperienceController extends Controller
             ]
         );
     }
+    
 }

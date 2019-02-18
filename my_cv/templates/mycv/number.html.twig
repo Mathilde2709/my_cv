@@ -68,13 +68,16 @@
 							{{experiences.getDateDebut() | date('d-m-y') }} /
 							{{experiences.getDateFin() |  date('d-m-y') }}
 						</li>
+						
+						<a href="{{ path('edit_experience', {id:experiences.getId()})
+						}}">Edit</a>
 					{% endfor %}
 				</ul>
 			</div>
 			
-			<a href="http://symphony-zera1.c9users.io/my_cv/public/index.php/edit/experience/2" target="_blank">Formulaire Expérience</a>
+			<a href="{{ path('formulaire_experience')}}" target="_blank">Formulaire Expérience</a>
 			<div class="clear"></div>
-		</section>
+		</section>   
 		
 		
 		<section>
@@ -117,7 +120,7 @@
 				</ul>
 			</div>
 			
-			<a href="http://symphony-zera1.c9users.io/my_cv/public/index.php/edit/formation/1" target="_blank">Formulaire Formation</a>
+			<a href="{{ path('formulaire_formation')}}" target="_blank">Formulaire Formation</a>
 			<div class="clear"></div>
 		</section>
 		
@@ -140,7 +143,7 @@
 				</ul>
 			</div>
 			
-			<a href="http://symphony-zera1.c9users.io/my_cv/public/index.php/edit/loisirs/4" target="_blank">Formulaire Loisir</a>
+			<a href="{{ path('formulaire_loisirs')}}" target="_blank">Formulaire Loisir</a>
 			<div class="clear"></div>
 		</section>
 		

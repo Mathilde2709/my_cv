@@ -27,13 +27,29 @@ class FormationController extends Controller
     {
         $entityManager = $this->getDoctrine()->getManager();
         $formation = $entityManager->getRepository(Formation::class)->findOneBy(['id' => $id]);
-        $form = $this->createForm(FormationType::class, $formation);
+        if($formation){
+            $form = $this->createForm(FormationType::class, $formation);
         
-        return $this->render('formation/create.html.twig',[
+            return $this->render('formation/create.html.twig',[
             'entity'=>$formation,
             'form' =>$form->createView(),
             ]
+          );
+        }  else {
+            return new Response(
+            '<html><body>Pas d\'ID </body></html>'
         );
+        }
+    }
+    
+    public function remove($id)
+    {
+        $formation = $eManager->getRepository("AppBundle:Formation")->FindOneBy(["id"=>$id]);
+        $eManager = $this->getDoctrine()->getManager();
+        $eManager->remove($formation);
+        $eManager->flush;
+        
+        return $this->redirectToRoute('app_lucky_number');
     }
     
     public function valid(Request $request)

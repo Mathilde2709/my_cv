@@ -27,13 +27,29 @@ class LoisirsController extends Controller
     {
         $entityManager = $this->getDoctrine()->getManager();
         $loisirs = $entityManager->getRepository(Loisirs::class)->findOneBy(['id' => $id]);
-        $form = $this->createForm(LoisirsType::class, $loisirs);
+        if($loisirs){
+             $form = $this->createForm(LoisirsType::class, $loisirs);
         
-        return $this->render('loisirs/create.html.twig',[
+             return $this->render('loisirs/create.html.twig',[
             'entity'=>$loisirs,
             'form' =>$form->createView(),
             ]
+            );
+        } else {
+            return new Response(
+            '<html><body>Pas d\'ID </body></html>'
         );
+        }
+     }
+    
+    public function remove($id)
+    {
+        $loisirs = $eManager->getRepository("AppBundle:Loisirs")->FindOneBy(["id"=>$id]);
+        $eManager = $this->getDoctrine()->getManager();
+        $eManager->remove($loisirs);
+        $eManager->flush;
+        
+        return $this->redirectToRoute('app_lucky_number');
     }
     
     public function valid(Request $request)
