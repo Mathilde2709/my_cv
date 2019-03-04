@@ -37,7 +37,6 @@ class Loisirs
      */
     private $competences;
 
-
     public function getId(): ?int
     {
         return $this->id;

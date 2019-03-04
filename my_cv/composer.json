@@ -65,6 +65,8 @@
         }
     },
     "require-dev": {
-        "escapestudios/symfony2-coding-standard": "3.x-dev"
+        "codeception/codeception": "^2.5",
+        "escapestudios/symfony2-coding-standard": "3.x-dev",
+        "symfony/test-pack": "^1.0"
     }
 }

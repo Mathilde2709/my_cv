@@ -20,7 +20,7 @@ class FormationType extends AbstractType
             ->add('save', SubmitType ::class, [
                 'attr' => ['class' => 'save'],
                 ])
-            ->add('remove', SubmitType::class,['attr' => ['class' => 'remove'],
+            ->add('remove', SubmitType::class, ['attr' => ['class' => 'remove'],
             ])
         ;
     }
