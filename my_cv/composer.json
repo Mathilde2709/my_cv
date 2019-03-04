@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "api-platform/api-pack": "^1.2",
+        "friendsofphp/php-cs-fixer": "^2.14",
         "sensio/framework-extra-bundle": "^5.2",
         "symfony/asset": "3.4.*",
         "symfony/console": "3.4.*",
@@ -62,5 +63,8 @@
             "allow-contrib": false,
             "require": "3.4.*"
         }
+    },
+    "require-dev": {
+        "escapestudios/symfony2-coding-standard": "3.x-dev"
     }
 }
