@@ -22,7 +22,8 @@ On peut également se connecter en tant qu'admin sur le cv afin d'avoir plus de 
 ![screenshot](https://github.com/Mathilde2709/my_cv/blob/master/my_cv/admin.PNG)
 ![screenshot](https://github.com/Mathilde2709/my_cv/blob/master/my_cv/cv_admin.PNG)
 
-De cette façon, je peux créer, ajouter, éditer et/ou supprimer des expériences/formations/loisirs/compétences.
+De cette façon, je peux créer, ajouter, éditer et/ou supprimer des expériences/formations/loisirs/compétences
+
 
 ### Gestion
     *Le cv est directement mit en ligne sur la plateforme Github
@@ -30,4 +31,6 @@ De cette façon, je peux créer, ajouter, éditer et/ou supprimer des expérienc
     *Les données du CV sont toutes stockées dans une base de donnée spécifique
 ![screenshot](https://github.com/Mathilde2709/my_cv/blob/master/my_cv/sql.PNG)
     *Le cv est également relié à une API
+![screenshot](https://github.com/Mathilde2709/my_cv/blob/master/my_cv/api.PNG)
+
 
