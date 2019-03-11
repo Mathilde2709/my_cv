@@ -174,23 +174,12 @@
 			<div class="sectionTitle">
 				<h1>Contact</h1>
 			</div>
-			
-
-			
-
+				
 			<div class="sectionContent col-md-9 col-sm-9 col-xs-12">
-				<ul>
-				    {% for con in contact  %}
-						<li class="padding-top-10">
-							{{con.getName()|capitalize }} <br/>
-							{{con.getTelephone()}} <br/>
-							{{con.getEmail()}} <br/>
-							{{con.getAdresse()}} <br/>
-							{{con.getPortfolio()}}
-							
-						</li>
-					{% endfor %}
-				</ul>
+  
+   			 <a href="{{ path('create_contact') }}">Me contacter</a>
+
+			
 			</div>
 			<div class="clear"></div>
 		</section>

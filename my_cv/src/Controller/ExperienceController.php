@@ -12,11 +12,11 @@ class ExperienceController extends Controller
 {
     public function create()
     {
-        $experience = new Experience();
-        $form = $this->createForm(ExperienceType::class, $experience);
+        $experience = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
 
-        return $this->render('experience/create.html.twig', [
-            'entity' => $experience,
+        return $this->render('contact/create.html.twig', [
+            'entity' => $contact,
             'form' => $form->createView(),
             ]
         );

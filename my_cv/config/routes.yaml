@@ -11,7 +11,11 @@ app_lucky_number:
 
 create_contact:
     path: /create/contact
-    controller: App\Controller\MathildeController::createcontact
+    controller: App\Controller\ContactController::create
+
+valid_contact:
+    path: /new/contact
+    controller: App\Controller\ContactController::valid
     
 create_formation:
     path: /create/formation

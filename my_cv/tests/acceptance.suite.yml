@@ -1,0 +1,8 @@
+actor: AcceptanceTester
+
+modules:
+    enabled:
+        - PhpBrowser:
+            url: 'https://symphony-zera1.c9users.io/my_cv/public/index.php/'
+            browser: chrome
+        - \Helper\Acceptance

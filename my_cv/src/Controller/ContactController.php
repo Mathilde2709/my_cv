@@ -13,8 +13,45 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("/contact")
  */
+ 
 class ContactController extends Controller
 {
+    public function create()
+    {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+
+        return $this->render('contact/create.html.twig', [
+            'entity' => $contact,
+            'form' => $form->createView(),
+            ]
+        );
+    }
+    
+    public function valid(Request $request)
+    {
+        $contact = new Contact();
+        $form = $this->createForm(ContactType::class, $contact);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $contact = $form->getData();
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($contact);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('app_lucky_number');
+        }
+
+        return $this->render('contact/create.html.twig', [
+            'entity' => $contact,
+            'form' => $form->createView(),
+            ]
+        );
+    }
+    
     /**
      * @Route("/", name="contact_index", methods={"GET"})
      */

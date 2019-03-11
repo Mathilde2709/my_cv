@@ -15,7 +15,7 @@ security:
                         roles: 'ROLE_USER'
                     
                     admin:
-                        password: $2y$12$RU7hi2BRbDnVlUpG4bcqzeNByaG919J4GeWIWzhLDJLEvms7GN3XW
+                        password: $2y$12$YBbRhqFwCOa8Sa0LWtW0uuZNe6AAIscA41P7wFePbTf6AKW6gU9QG
                         roles: 'ROLE_ADMIN'
     firewalls:
         dev:

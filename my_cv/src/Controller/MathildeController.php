@@ -84,8 +84,7 @@ class MathildeController extends Controller
         $form->setName('Mes Contacts');
         $form->setTelephone('0625896347');
         $form->setEmail('mathildemeunier@gmail.com');
-        $form->setAdresse('7 rue pyeonyong Séoul');
-        $form->setPortfolio('mathildemeunier.com');
+        $form->setCommentaire('Bravo');
         $eManager = $this->getDoctrine()->getManager();
         $eManager->persist($form);
         $eManager->flush();

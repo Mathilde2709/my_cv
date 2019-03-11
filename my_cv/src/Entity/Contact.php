@@ -34,12 +34,8 @@ class Contact
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $adresse;
+    private $commentaire;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $portfolio;
 
     public function getId(): ?int
     {
@@ -82,27 +78,16 @@ class Contact
         return $this;
     }
 
-    public function getAdresse(): ?string
+    public function getCommentaire(): ?string
     {
-        return $this->adresse;
+        return $this->commentaire;
     }
 
-    public function setAdresse(string $adresse): self
+    public function setCommentaire(string $commentaire): self
     {
-        $this->adresse = $adresse;
+        $this->commentaire = $commentaire;
 
         return $this;
     }
 
-    public function getPortfolio(): ?string
-    {
-        return $this->portfolio;
-    }
-
-    public function setPortfolio(string $portfolio): self
-    {
-        $this->portfolio = $portfolio;
-
-        return $this;
-    }
 }
