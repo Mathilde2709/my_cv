@@ -1,30 +1,17 @@
+# Mathilde Meunier CV
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+Ce projet constitue un nouveau curriculum vitae qui cette fois-ci est en ligne et est plus intéractif. 
 
+Il contient une courte présentation de ma personne, ainsi que des plusieurs catégories telles que
+"Mes Expériences", "Mes Formations", "Mes Loisirs", "Mes Compétences". 
+![screenshot](https://github.com/Mathilde2709/my_cv/blob/master/my_cv/mycv.PNG?raw=true)
 
-Hi there! Welcome to Cloud9 IDE!
-
-To get you started, we have created a small hello world application.
-
-1) Open the hello-world.php file
-
-2) Follow the run instructions in the file's comments
-
-3) If you want to look at the Apache logs, check out ~/lib/apache2/log
-
-And that's all there is to it! Just have fun. Go ahead and edit the code, 
-or add new files. It's all up to you! 
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+### Les catégories 
+    * Profil Personnel
+    * Expériences Professionnelles
+    * Mes Compétences
+    * Mes Formations
+    * Mes Loisirs
+    * Formulaire Contact
+    
+### 
