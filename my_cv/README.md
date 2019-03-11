@@ -26,4 +26,8 @@ De cette façon, je peux créer, ajouter, éditer et/ou supprimer des expérienc
 
 ### Gestion
     *Le cv est directement mit en ligne sur la plateforme Github
+![screenshot](https://github.com/Mathilde2709/my_cv/blob/master/my_cv/github.PNG)
     *Les données du CV sont toutes stockées dans une base de donnée spécifique
+![screenshot](https://github.com/Mathilde2709/my_cv/blob/master/my_cv/sql.PNG)
+    *Le cv est également relié à une API
+
